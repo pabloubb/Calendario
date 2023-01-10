@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">My Calendar</string>
+    <string name="action_sign_in">Log in</string>
+    <string name="action_register">Register</string>
+    <string name="action_return">Return</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_password2">Repeat password</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_name">Name</string>
+    <string name="prompt_birthday">Birthday       [01/01/1000]</string>
+    <string name="current_date">Current Date</string>
+</resources>
