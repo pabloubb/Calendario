@@ -2,6 +2,7 @@ package com.mobile.myapplication
 
 import android.app.AlertDialog
 import android.content.DialogInterface
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -32,25 +33,42 @@ class HomeActivity : AppCompatActivity() {
 
             val dialogBuilder = AlertDialog.Builder(this)
 
-            dialogBuilder.setMessage("Do you want to create a new Event or Task ?")
+            dialogBuilder.setMessage("What do you want to create?")
 
-                .setCancelable(false)
+                .setCancelable(true)
 
-                .setNeutralButton("Cancel", DialogInterface.OnClickListener {
-                        dialog, id -> finish()
-                })
 
-                .setPositiveButton("Task", DialogInterface.OnClickListener {
-                        dialog, id -> finish()
+
+                .setPositiveButton("Diary", DialogInterface.OnClickListener {
+                        dialog, id -> dialog.cancel()
+                        val intent1 = Intent(this, DiaryActivity::class.java)
+                        startActivity(intent1)
                 })
 
                 .setNegativeButton("Event", DialogInterface.OnClickListener {
                         dialog, id -> dialog.cancel()
+                        val intent2 = Intent(this, EventActivity::class.java)
+                        startActivity(intent2)
                 })
 
             val alert = dialogBuilder.create()
             alert.setTitle("Create")
             alert.show()
+        }
+    }
+
+    private fun botonEvent(){
+        val button1 = findViewById<Button>(R.id.register)
+        button1.setOnClickListener {
+
+        }
+    }
+
+    private fun botonDiary(){
+        val button1 = findViewById<Button>(R.id.register)
+        button1.setOnClickListener {
+            val intent1 = Intent(this, RegisterActivity::class.java)
+            startActivity(intent1)
         }
     }
 }

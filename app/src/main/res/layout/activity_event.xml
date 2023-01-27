@@ -4,21 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    tools:context=".EventActivity">
+
+    <EditText
+        android:id="@+id/date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:autofillHints=""
+        android:hint="@string/prompt_date"
+        android:inputType="date"
+        android:selectAllOnFocus="true"
+        android:textColorHint="#757575"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch1"
+        app:layout_constraintVertical_bias="0.023"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
-        android:id="@+id/register"
+        android:id="@+id/register_event"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="64dp"
-        android:text="@string/action_register"
+        android:text="@string/prompt_create"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/birthday"
+        app:layout_constraintTop_toBottomOf="@+id/date"
         app:layout_constraintVertical_bias="0.437" />
 
     <Button
@@ -32,88 +50,73 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/register"
+        app:layout_constraintTop_toBottomOf="@+id/register_event"
         app:layout_constraintVertical_bias="0.606" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/start_time"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:hint="@string/prompt_password"
-        android:imeActionLabel="@string/action_sign_in_short"
+        android:autofillHints=""
+        android:hint="@string/prompt_start_time"
         android:imeOptions="actionDone"
-        android:inputType="textPassword"
+        android:inputType="time"
         android:selectAllOnFocus="true"
         android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username"
-        tools:ignore="TouchTargetSizeCheck"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/eventName"
+        tools:ignore="TextFields,TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/password2"
+        android:id="@+id/end_time"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:hint="@string/prompt_password2"
-        android:imeActionLabel="@string/action_sign_in_short"
+        android:autofillHints=""
+        android:hint="@string/prompt_end_time"
         android:imeOptions="actionDone"
-        android:inputType="textPassword"
+        android:inputType="time"
         android:selectAllOnFocus="true"
         android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
-        tools:ignore="TouchTargetSizeCheck"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/start_time"
+        tools:ignore="TextFields,TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/description"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:hint="@string/prompt_email"
-        android:inputType="textEmailAddress"
-        android:selectAllOnFocus="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password2"
-        tools:ignore="TouchTargetSizeCheck"
-        android:autofillHints="" />
-
-    <EditText
-        android:id="@+id/birthday"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:hint="@string/prompt_birthday"
-        android:inputType="date"
+        android:autofillHints=""
+        android:hint="@string/prompt_desc"
+        android:inputType="textMultiLine"
         android:selectAllOnFocus="true"
         android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email"
-        tools:ignore="TouchTargetSizeCheck"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/end_time"
+        tools:ignore="TouchTargetSizeCheck" />
+
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/eventName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="96dp"
-        android:hint="@string/prompt_name"
+        android:autofillHints=""
+        android:hint="@string/prompt_name_of_event"
         android:inputType="textPersonName"
         android:selectAllOnFocus="true"
+        android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TouchTargetSizeCheck"
-        android:autofillHints="" />
+        tools:ignore="TouchTargetSizeCheck" />
 
 
     <ProgressBar
@@ -125,9 +128,21 @@
         android:layout_marginBottom="64dp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/password"
-        app:layout_constraintStart_toStartOf="@+id/password"
+        app:layout_constraintEnd_toEndOf="@+id/start_time"
+        app:layout_constraintStart_toStartOf="@+id/start_time"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.3" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/prompt_all_day"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description"
+        tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml,TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,7 +7,14 @@
     <string name="prompt_password2">Repeat password</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="prompt_email">Email</string>
+    <string name="prompt_desc">Description</string>
+    <string name="prompt_all_day">All day</string>
     <string name="prompt_name">Name</string>
+    <string name="prompt_create">Create</string>
+    <string name="prompt_name_of_event">Name of event</string>
     <string name="prompt_birthday">Birthday       [01/01/1000]</string>
+    <string name="prompt_date">Date           [01/01/1000]</string>
+    <string name="prompt_start_time">Start time         [00:00]</string>
+    <string name="prompt_end_time">Finish time       [00:00]</string>
     <string name="current_date">Current Date</string>
 </resources>
