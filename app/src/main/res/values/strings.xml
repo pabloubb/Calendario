@@ -9,12 +9,16 @@
     <string name="prompt_email">Email</string>
     <string name="prompt_desc">Description</string>
     <string name="prompt_all_day">All day</string>
+    <string name="prompt_reminder">Reminder</string>
     <string name="prompt_name">Name</string>
     <string name="prompt_create">Create</string>
+    <string name="prompt_delete">Delete</string>
+    <string name="prompt_priority">Priority       [1...10]</string>
     <string name="prompt_name_of_event">Name of event</string>
-    <string name="prompt_birthday">Birthday       [01/01/1000]</string>
-    <string name="prompt_date">Date           [01/01/1000]</string>
-    <string name="prompt_start_time">Start time         [00:00]</string>
-    <string name="prompt_end_time">Finish time       [00:00]</string>
+    <string name="prompt_birthday">Birthday       [dd/mm/yyyy]</string>
+    <string name="prompt_date">Date           [dd/mm/yyyy]</string>
+    <string name="prompt_start_time">Start time         [hh:mm]</string>
+    <string name="prompt_end_time">Finish time       [hh:mm]</string>
     <string name="current_date">Current Date</string>
+    <string name="current_delete">Delete Account</string>
 </resources>

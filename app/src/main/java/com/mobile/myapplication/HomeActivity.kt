@@ -18,6 +18,7 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
         textViewFecha()
         botonDesplegable()
+        botonConfiguration()
     }
 
 
@@ -25,6 +26,14 @@ class HomeActivity : AppCompatActivity() {
     private fun textViewFecha(){
         val text1 = findViewById<TextView>(R.id.idTVDate)
         text1.text = now().toString()
+    }
+
+    private fun botonConfiguration(){
+        val button1 = findViewById<Button>(R.id.boton_configuracion)
+        button1.setOnClickListener {
+            val intent1 = Intent(this, AccountActivity::class.java)
+            startActivity(intent1)
+        }
     }
 
     private fun botonDesplegable(){

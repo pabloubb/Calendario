@@ -6,10 +6,10 @@ import android.view.View
 import android.widget.Button
 import android.widget.ProgressBar
 
-class DiaryActivity : AppCompatActivity() {
+class AccountActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_diary)
+        setContentView(R.layout.activity_account)
         botonSalir()
     }
 
